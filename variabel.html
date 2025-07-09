@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		let namaPertama = "Budi"; // String
+		let namaTengah = "Akima"; // String
+		let namaBelakang = "Sijabat"; // String
+		let namaLengkap = namaPertama + " " + namaTengah + " " + namaBelakang; // String
+		
+
+		let umur = 25; // Number
+		let namaPeliharaan = "Kucing"; // String
+		let umurPeliharaan = 3; // Number
+		let deskripsi = "Saya memiliki seekor " + namaPeliharaan + " berumur " + umurPeliharaan + " tahun."; // String
+
+		document.writeln(namaLengkap); // Output: Budi Akima Sijabat
+		document.writeln("<br>"); // New line
+		document.writeln(deskripsi); // Output: Saya memiliki seekor Kucing berumur 3 tahun.
+
+		//mengganti nilai variabel (data terakhir yang dipakai/disimpan)
+		let barangFavorit;
+		let makananFavorit;
+
+		makananFavorit = "Nasi Goreng"; // String		
+		makananFavorit = "Sate"; // String (dalam kasus ini, nilai sebelumnya "Nasi Goreng" akan digantikan dengan "Sate")
+
+		barangFavorit = "Sepatu"; // String
+		barangFavorit = "Tas"; // String (dalam kasus ini, nilai sebelumnya "Sepatu" akan digantikan dengan "Tas")
+
+		//const/constan tidak bisa diganti nilainya
+		const pi = 3.14; // Number (nilai pi tidak bisa diubah)
+		pi = 3.14159; // Ini akan menghasilkan error karena pi adalah konstanta
+
+	</script>
+</body>
+</html>
