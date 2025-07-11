@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		// Masalah tanpa konversi data
+		const a = '10'; // angap input user
+		const b = 5;
+
+		const hasil = a + b; // '105' (string concatenation)
+		document.writeln(`<p> ${hasil} </p>`); // Output: '105'
+
+		// Solusi dengan konversi data
+		const aAngka = Number(a); // Konversi string ke number
+		const hasilKonversi = aAngka + b; // 15 (number addition)
+	  document.writeln(`<p> ${hasilKonversi} </p>`); // Output: 15
+
+		// Konversi ke string
+		const angka = 123;
+		const angkaKeString = String(angka); // Konversi number ke string
+		document.writeln(`<p> ${angkaKeString} </p>`); // Output: '123'
+
+		// parseInt dan parseFloat
+		const angkaString = '123.45';
+		const angkaInt = parseInt(angkaString); // Konversi ke integer
+		const angkaFloat = parseFloat(angkaString); // Konversi ke float
+		document.writeln(`<p> ${angkaInt} </p>`); // Output: 123
+		document.writeln(`<p> ${angkaFloat} </p>`); // Output: 123.45
+
+		// NaN (Not a Number)
+
+		document.writeln(`<p> ${parseInt("1234hai")} </p>`); // Output: 1234
+		document.writeln(`<p> ${parseFloat("1234hai")} </p>`); // Output: 1234
+		document.writeln(`<p> ${parseInt("hai1234")} </p>`); // Output: NaN
+		document.writeln(`<p> ${parseFloat("hai1234")} </p>`); // Output: NaN
+
+		document.writeln(`<p> ${Number("hai1234")} </p>`); // Output: NaN
+		document.writeln(`<p> ${Number("hai1234")} </p>`); // Output: NaN		
+
+		// Contoh NaN
+		const first = Number("hai"); // NaN
+		const hasilNaN = first + 10; // NaN
+		document.writeln(`<p> ${hasilNaN} </p>`); // Output: NaN
+
+		// Mengecek NaN
+		document.writeln(`<p> ${isNaN(hasilNaN)} </p>`); // Output: true
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const name = 'John Doe';
+		const nilai = 90;
+		const template = `name : ${name}`;
+		console.info(template);
+
+		const namaDepan = 'John';
+		const namaTengah = 'Doe';
+		const namaBelakang = 'Smith';
+		const templateBaru = `Nama lengkap: ${namaDepan} ${namaTengah} ${namaBelakang}`;
+		console.info(templateBaru);
+		const templateLama = 'Nama lengkap: ' + namaDepan + ' ' + namaTengah + ' ' + namaBelakang;
+		console.info(templateLama);
+
+		// expression string template
+		const templateSiapaLulus = `name : ${name}, Lulus : ${nilai >= 75}`;
+		console.info(templateSiapaLulus);
+
+		//multiline string template
+		const templateMultiline = `Ini adalah baris pertama
+Ini adalah baris kedua
+Ini adalah baris ketiga`;
+
+		document.writeln("<pre>");
+		document.writeln(templateMultiline);
+		document.writeln("</pre>");
+
+	</script>
+	
+</body>
+</html>
