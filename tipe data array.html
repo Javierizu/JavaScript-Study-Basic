@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		let arrKosong = [];
+		let arrNama = ["Budi", "Siti", "Joko"]; // data ke 0 1 2
+		let arrAngka = [1, 2, 3, 4, 5];
+		let arrCampuran = ["Budi", 1, true, null, undefined, { nama: "Joko" }, [1, 2, 3]]; // data ke 0 1 2 3 4 5 6	
+
+		// push dan mengakses data array
+		const arrAyam = [];
+		arrAyam.push("Ayam Kampung");
+		arrAyam.push("Ayam Penyet", "Ayam Penyet Pedas"); 
+		arrAyam.push("Ayam Penyet Biasa", "Ayam Penyet Pedas Biasa");
+		console.table(arrAyam); // Output: Ayam Kampung, Ayam Penyet, Ayam Penyet Pedas, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa
+
+		// mengecek panjang array
+		console.log(arrAyam.length); // Output: 5
+
+		// mengakses data array
+		arrAyam[0] = "Ayam negri";
+		arrAyam[1] = "Ayam negri Pedas";
+		console.table(arrAyam); // Output: Ayam negri, Ayam negri Pedas, Ayam Penyet Pedas, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa		
+		console.info(arrAyam[0]); // Output: Ayam negri
+		console.info(arrAyam[1]); // Output: Ayam negri Pedas
+		console.info(arrAyam[2]); // Output: Ayam Penyet Pedas
+
+		// menghapus data array
+		delete arrAyam[2]; // Menghapus data pada index 2
+		console.table(arrAyam); // Output: Ayam negri, Ayam negri Pedas, undefined, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa
+
+		arrAyam[2]= "Ayam Penyet Pedas Baru"; // Mengganti data pada index 2
+		console.table(arrAyam); // Output: Ayam negri, Ayam negri Pedas, Ayam Penyet Pedas Baru, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa
+		arrAyam.push(1,2,3,4,5); // Menambahkan data baru
+		console.table(arrAyam); // Output: Ayam negri, Ayam negri Pedas, Ayam Penyet Pedas Baru, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa, 1, 2, 3, 4, 5
+		arrAyam.push(["bebek", "bebek pedas"]); // Menambahkan array baru
+		console.table(arrAyam); // Output: Ayam negri, Ayam negri Pedas, Ayam Penyet Pedas Baru, Ayam Penyet Biasa, Ayam Penyet Pedas Biasa, 1, 2, 3, 4, 5, Array(2)
+
+
+
+	</script>
+	
+</body>
+</html>
