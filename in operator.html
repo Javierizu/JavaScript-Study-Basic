@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	
+	<script>
+		const person = {
+			name: "John",
+			age: 30,
+			isEmployed: true
+		};
+
+		//const hasil = "name" in person;
+		//document.write(hasil);
+		
+		if ("name" in person) {
+			document.write("The property 'name' exists in the person object.<br>");
+		} else {
+			document.write("The property 'name' does not exist in the person object.<br>");
+		}
+
+		const budi = {
+			firstName: "Budi",
+			midleName: undefined, // midleName is defined but has no value
+			//midleName: null, // midleName is defined and has a null value
+			lastName: "Santoso",
+			age: 25,
+			isEmployed: false
+		}
+
+		if ("midleName" in budi) {
+			document.write("The property 'midleName' exists in the budi object.<br>");
+		} else {
+			document.write("The property 'midleName' does not exist in the budi object.<br>"); // midleName is undefined, but it still exists in the object
+		}
+
+		const names = [null, "Bob", null];
+		const result =  0 in names;
+		document.write("The result of checking if index 0 exists in the names array: " + result + "<br>");
+		
+		</script>
+	
+</body>
+</html>

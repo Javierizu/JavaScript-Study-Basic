@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const nilai = 90;
+		let keterangan;
+
+		// Menggunakan if statement untuk menentukan keterangan lulus atau tidak
+
+		
+		if (nilai >= 75) {
+			keterangan = 'Lulus';
+		} else {
+			keterangan = 'Tidak Lulus';
+		}
+		document.writeln(`<p> Keterangan: ${keterangan} dengan nilai ${nilai} </p>`);
+
+		// Menggunakan operator ternary untuk menentukan keterangan lulus atau tidak
+		
+	  keterangan = (nilai >= 75) ? 'Lulus' : 'Tidak Lulus'; 
+		document.writeln(`<p> Keterangan: ${keterangan} dengan nilai ${nilai} </p>`);
+
+	</script>
+	
+</body>
+</html>

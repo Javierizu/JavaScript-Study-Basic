@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		let data = null;
+
+		const typeofData = typeof data;
+		document.write("The type of 'data' is: " + typeofData + "<br>");
+
+		data = 42;
+
+		const typeofDataAfterNumber = typeof data;
+		document.write("The type of 'data' is: " + typeofDataAfterNumber + "<br>");
+
+		data = "Hello, World!";
+
+		const typeofDataAfterString = typeof data;
+		document.write("The type of 'data' is: " + typeofDataAfterString + "<br>");
+
+		data = { key: "value" };	
+
+		const typeofDataAfterObject = typeof data;
+		document.write("The type of 'data' is: " + typeofDataAfterObject + "<br>");
+	</script>	
+</body>
+</html>

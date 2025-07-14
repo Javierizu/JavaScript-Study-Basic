@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const person = {};
+
+		let negara = person.address.country;
+
+		document.write(negara); // This will throw an error
+		document.write("This line will not execute due to the error above."); 
+
+		// To avoid the error, we can use optional chaining (without using if function)
+
+		let negaraSafe = person?.address?.country; // This will safely return undefined if any part of the chain is undefined
+		document.write(negaraSafe); // This will output 'undefined' without throwing an error
+		
+	</script>
+	
+</body>
+</html>
