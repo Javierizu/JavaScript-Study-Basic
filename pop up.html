@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		// alert, prompt, confirm
+		alert("Selamat datang di website kami!");
+
+		const nama = prompt("Siapa nama Anda?", "Nama Anda");
+
+		alert(`Halo ${nama}!`);
+
+		const masuk = confirm("Apakah Anda ingin melanjutkan?");
+		if (masuk) {
+			const identitas = prompt("sebutkan identitas anda.");
+			alert(`Identitas Anda adalah: ${identitas}`);
+		} else {
+			alert("sayonara");
+		}
+	</script>
+	
+</body>
+</html>
