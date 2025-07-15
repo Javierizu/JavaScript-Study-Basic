@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		// operator or digunakan untuk mengembalikan nilai pertama yang truthy
+		// jika semua nilai falsy, maka akan mengembalikan nilai terakhir
+		console.log("HELLO" || ""); // Outputs: "HELLO"
+		console.log("" || "WORLD"); // Outputs: "WORLD"
+		console.log("" || []); // Outputs: []
+		console.log(0 || 42); // Outputs: 42
+		console.log(null || "fallback"); // Outputs: "fallback"
+		console.log(null || "NULL"); // Outputs: "NULL"
+		console.log(undefined || "default"); // Outputs: "default"
+		console.log(NaN || "not a number"); // Outputs: "not a number
+		console.log(false || true); // Outputs: true
+		console.log(true || false); // Outputs: true
+
+		// operator and digunakan untuk mengembalikan nilai pertama yang falsy
+		// jika semua nilai truthy, maka akan mengembalikan nilai terakhir
+		console.log("HELLO" && ""); // Outputs: ""
+		console.log("" && "WORLD"); // Outputs: ""
+		console.log("" && []); // Outputs: ""
+		console.log(0 && 42); // Outputs: 0
+		console.log(null && "fallback"); // Outputs: null
+		console.log(null && "NULL"); // Outputs: null
+		console.log(undefined && "default"); // Outputs: undefined
+		console.log(NaN && "not a number"); // Outputs: NaN
+		console.log(false && true); // Outputs: false
+		console.log(true && false); // Outputs: false
+
+
+
+		// kapan dipakai operator logika di non boolean
+
+		const person = {
+			firstName: "John",
+			lastName: "Doe",
+		}
+
+		let name = person.firstName || person.lastName;
+		console.log(name); // Outputs: "John"
+
+	</script>
+	
+</body>
+</html>
