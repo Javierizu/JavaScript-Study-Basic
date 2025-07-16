@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		const person = {
+			name: 'John',
+			age: 30,
+			city: 'New York'
+		};
+
+		// Using for...in to iterate over the properties of the object
+		for (const properties in person) {
+			document.writeln(`<p>${properties}: ${person[properties]}</p>`); 
+		}
+
+		const numbers = ["asep", "Budi", "cici", "denis", "ela"];
+
+		// Using for...in to iterate over the indices of the array
+		for (const index in numbers) {
+			document.writeln(`<p>Index ${index}: ${numbers[index]}</p>`);
+		}
+	</script>
+	
+</body>
+</html>

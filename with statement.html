@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// Using with statement to simplify access to properties of an object
+		const person = {
+			name: 'John',
+			age: 30,
+			city: 'New York'
+		};
+
+		// without using with statement
+
+		document.writeln(`<p>Name: ${person.name}</p>`);
+		document.writeln(`<p>Age: ${person.age}</p>`);
+	  document.writeln(`<p>City:${person.city}</p>`);
+
+		// Using with statement (not recomend)
+		with (person) {
+			document.writeln(`<p>Name: ${name}</p>`);
+			document.writeln(`<p>Age: ${age}</p>`);
+			document.writeln(`<p>City: ${city}</p>`);
+		}
+
+	</script>
+	
+</body>
+</html>
