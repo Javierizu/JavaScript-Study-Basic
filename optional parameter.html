@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		function sayHi (firstName, middleName, LastName) { // ada 3 parameter
+			document.writeln(`<p>Hi ${firstName} </P>`)
+			document.writeln(`<p>Hi ${middleName} </P>`)
+			document.writeln(`<p>Hi ${LastName} </P>`)
+		}
+
+		sayHi()
+		sayHi("Mantap") // yang di input hanya 1 parameter, diJS tidak error
+		sayHi("Mantap","Sekali")
+		sayHi("Mantap","Sekali","Bang")
+		sayHi("Mantap","Sekali","Bang","Budi") // Budi tidak keluar 	
+
+	</script>
+	
+</body>
+</html>

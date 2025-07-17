@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+	//function return value
+		function sayHi (firstName, LastName) {
+			const say = `<p>Hi ${firstName} ${LastName}!`;
+			return say; 
+		}
+
+	sayHi; // tidak muncul
+	
+	const result = sayHi("Asep","Sigma");
+	document.writeln(`<p> ${result} </p>`) // ini yang muncul
+
+	// function return value lebih dari satu
+		function nilai (value) {
+			if(value>90) {
+				return "A";
+			} else if(value > 80) {
+				return "B";
+			} else if(value > 70) {
+				return "C";
+			} else if(value > 60) {
+				return "D";
+			} else {
+				return "E";
+			}
+		}
+
+		nilai;
+
+		const dapatNilaiApa = nilai(75)
+		document.writeln(dapatNilaiApa)
+
+	// menghentikan eksekusi dengan return
+
+	function  isContain (array, searchValue) {
+		for (const element of array) {
+			if (element === searchValue) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// cosnt array = ["ayam","bebek","cicak"];
+	// cosnt searchValue = "bebek";
+	const Hasil = isContain (["ayam","bebek","cicak"],"bebek"); // or = isContain(array,searchValue)
+	document.writeln(`<p>${Hasil}</p>`)
+	</script>
+	
+</body>
+</html>

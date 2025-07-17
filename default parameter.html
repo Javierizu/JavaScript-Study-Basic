@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		function register (name, gender="Unknown") { // unknown adalah default value gender
+			document.writeln(`<p>Hi ${name} gender kamu ${gender} ya? </p>`)
+		}
+
+		register;
+		register("Budi");
+		register("Budi","Laki-laki")
+		register("asep",undefined)
+		register("asep",null)
+	</script>
+	
+</body>
+</html>

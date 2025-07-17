@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		function sum (name, ...data) { // "..." adalah rest parameter 
+			let total = 0;  
+			for (const item of data) {
+				total += item;
+			}
+			document.writeln(`<p>${name} totalnya ada ${total}</p>`)
+		}
+
+		sum("Mobil Listrik",10,20,30,40,50);// rest parameter = 10-50
+		sum("Mobil Listrik",1,30,50);
+		sum("Mobil Listrik",1030,4088,50); 
+
+		const a = [10,20,30,40,50]
+
+		sum("nasgor",a);
+
+		// spread sintax
+		sum("nasgor",...a);
+
+		// arguments object (inferior)
+		function oldSum () {
+			let total = 0;
+			for (const item of arguments) {
+				total += argument;
+			}
+			document.writeln(`totalnya ada ${total}`)
+		}
+
+		oldSum(1,2,3,4,5);
+
+	</script>
+	
+</body>
+</html>
