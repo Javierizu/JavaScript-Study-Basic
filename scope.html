@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		// global scope
+		let count = 0; // GLOBAL SCOPE (bisa diakses dimanapun)
+
+		function hitMe() { // global scope	
+			count++; // local scope
+			console.log(`${count}`) // local scope
+		}
+
+		hitMe();
+		hitMe();
+
+		console.log(`${count}`); // global scope
+
+		// local scope
+
+		function first() { // gs
+			// ls pertama
+			let firstHit = "au"; 
+			console.log(`${firstHit}`); // bisa
+		};
+
+		function second() { // gs
+			// ls kedua
+			let secondHit = "arh"; 
+			// console.log(`${firstHit}`); // error
+			// console.log(`${secondHit}`); // bisa
+		};
+
+		first();
+		second();
+
+		// console.log(`${firstHit}`); // firstHit is not defined karena firstHit adalah locak scope
+		// console.log(`${secondHit}`); // secondHit ~~~~~~
+
+		// local scope di nested function
+
+		function outer() {
+			let a = "Mahal Mahal"; // var a bisa di akses oleh fuction inner
+
+			function inner() {
+				console.log(`${a}`); // bukti bisa di akses
+				let b = "Gacor Kang"; // var b tidak bisa di akses oleh fuction outer
+			}
+			// console.log(`${b}`); // error
+			inner();
+		}
+
+		outer();
+	</script>
+	
+</body>
+</html>

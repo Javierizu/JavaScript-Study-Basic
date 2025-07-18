@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+	// anonymus function dengan memasukan ke variabel
+		const introvert = function (name) { 
+			document.writeln(`<p>Hi ${name}</p>`)
+		}  
+
+		introvert("Budi");
+
+	// anonymus fucntion dengan memasukan ke parameter
+
+		introvert("Aceh");
+		introvert("Angsa");
+
+		function giveMeName(callback) {
+			callback("Zebra")
+		}
+
+		giveMeName(introvert);
+
+		giveMeName(function(name){
+			document.writeln(`<p>Hi ${name}</p>`);
+		});
+	</script>
+	
+</body>
+</html>

@@ -9,13 +9,17 @@
 <body>
 
 	<script>
-		function sayHi (firstName, LastName) {
-			document.writeln(`<p> Hi ${firstName} ${LastName} </p>`)
+		// disebut juga nested fuction
+		function outer(){
+			function inner(){
+				console.info("inner");
+			};
+			inner();
+			inner();
 		}
 
-		sayHi("Asep", "Subianto"); // parameter 1 dan parameter 2
-		sayHi("Cici", "widodo");
-
+		outer();
+		//inner; // error
 	</script>
 	
 </body>
