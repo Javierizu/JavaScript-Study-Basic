@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		// function generator simple
+		function* buatNama() {
+			yield "Budi";
+			yield "Cici";
+			yield "Dona";
+		};
+
+		console.info(buatNama());
+
+		const names = buatNama();
+		//console.info(names[0]); // tidak bisa
+
+		for (const name of names) {
+			console.log(name)
+		}
+
+		// function generator lebih komples
+
+		function* buatGanjil(value) {
+			for (let i = 0; i < value; i++) {
+				if (i % 2 === 1) {
+					console.info(`Yield ${i}`); // lazy generator 
+					yield i; // karena hanya melakukan sesuatu ketika ....... dengan cara yield satu satu
+				}
+			}
+		}
+
+		function* buatGanjiArrayl(value) {
+			const result = []
+			for (let i = 0; i < value; i++) {
+				if (i % 2 === 1) {
+					console.info(`Yield ${i}`); // eager generator 
+					 result.push(i) // karena ketika diminta langsung menghasilakan (yield sekaligus)
+				}
+			}
+		}
+
+		const angka = buatGanjil(100);
+
+		for (const number of angka) {
+			console.info(number); // ini meminta dan mau pakai (iterasi)
+		};
+		
+
+	</script>
+	
+</body>
+</html>

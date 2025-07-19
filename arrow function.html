@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const sayHi = (name) => {
+			document.writeln(`Hi, ${name}`);
+			document.writeln(`${name} apakah kamu mau kopi?`);
+		};
+
+		// const sayTeman = (teman) => document.writeln(`${teman} adalah teman baikku`);
+		const sayTeman = teman => document.writeln(`${teman} adalah teman baikku`);
+
+		sayHi("budi");
+		sayTeman("Asep");
+
+		const sum = (first, second) => first + second;
+		
+		console.info(sum(10,10));
+
+		function giveMeName(callback) {
+			callback("Siap")
+		}
+
+		giveMeName(name => console.info(`hello ${name}`));
+	</script>	
+</body>
+</html>
