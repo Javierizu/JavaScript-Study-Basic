@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		// cara biasa
+
+		function sayHi(nama) {
+			alert(`Hi ${nama}`)
+		}
+
+		const orang = {
+			nama : "Ayam",
+			sayHi : sayHi,
+			}
+
+		orang.sayHi("Budi");
+
+		// cara object method (cara 1)
+
+		const orang2 = {
+			nama : "Zebra",
+			sayHi : function (nama) {
+				alert(`Hi ${nama}`);
+			}
+		};
+
+		orang2.sayHi("Cici");
+
+		// cara menambahakn method ke object (cara 2)
+
+		const orang3 = {
+			nama : "Bebek"
+		}
+
+		orang3.sayHi = function (nama) {
+			alert(`Hi ${nama}`)
+		}
+
+		orang3.sayHi("Dona")
+
+	</script>
+	
+</body>
+</html>
