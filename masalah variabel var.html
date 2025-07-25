@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		// terjadi karena tidak terikat dalam local scope
+
+		// contoh dengan let
+
+		let i = 100;
+
+		for (let i=1; i<10; i++) {
+			console.log(`local ${i}`);
+		};
+
+		console.info(`Global ${i}`);
+
+		// contoh dengan var
+
+		var j = 100;
+
+		for (var j=1; j<10; j++) { 
+			console.log(`local ${j}`);
+		};
+
+		console.info(`Global ${j}`); // var j = 100 diubah/overwrite menjadi 10
+
+	</script>
+
+</body>
+</html>

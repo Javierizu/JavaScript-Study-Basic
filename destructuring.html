@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		// cara pertama
+		const names = ['prabowo','subianto','sigma','Budianto','Ganteng'];
+		const firstName = names[0];
+		const middleName = names[1];
+		const lastName = names[2];
+
+		console.log(firstName);
+		console.log(middleName);
+		console.log(lastName);
+
+		// cara kedua (destructuring)
+		const [first, middle, last, ...others] = names;
+		
+		console.log(first);
+		console.log(middle);
+		console.log(last);
+		console.log(others);
+
+		// contoh destructuring pada objek
+
+		const person = {
+			firstName1: "Prabowo",
+			lastName1: "Subianto",
+			age: 50,
+			address: {
+				street: "Jl. Merdeka No. 1",
+				city: "Jakarta",
+				country: "Indonesia"
+			},
+			hobbies: ["membaca", "berolahraga", "bermain musik"],
+			channel: "Prabowo Subianto Official",
+		};
+
+		const {firstName1, lastName1, address, ...others1} = person;
+		console.log(firstName1);
+		console.log(lastName1);
+		console.log(address);
+		console.log(others1);
+
+		// contoh destructuring nested object
+
+		const {address: {street, city, country}} = person;
+		console.log(street);
+		console.log(city);
+		console.log(country);
+
+		// contoh destructuring pada function parameter
+	{
+		const personB = {
+			firstName: "asep",
+			lastName: "Ganteng",
+			age: 69
+		};
+
+		function displayPerson(personB) {
+			console.log(personB.firstName);
+			console.log(personB.lastName);
+			console.log(personB.age);
+		}
+
+		function displayPersonBetter(firstName, lastName, age) {
+			console.log(firstName);
+			console.log(lastName);
+			console.log(age);
+		}
+
+		displayPerson(personB); 
+
+		displayPersonBetter(personB.firstName, personB.lastName, personB.age);
+	}
+
+	{
+		function sum(array) {
+			return array[0] + array[1];
+		}
+
+		function sumCanggih([first, second]){
+			return first + second;
+		}
+
+		console.info(sum([1, 2])); // 3
+
+		console.info(sumCanggih([5, 5])); // 10
+	}
+
+	{
+		// default value pada destructuring
+
+		const personC = {
+			firstName: "Budi",
+			age: 30
+		};
+
+		function displayPersonDefault({firstName, middleName = "Ganteng", lastName, age = 25}) {
+			console.log(firstName);
+			console.log(middleName);
+			console.log(lastName);
+			console.log(age);
+		}
+
+		displayPersonDefault(personC); // middleName akan diisi "Ganteng" dan age akan diisi 25
+
+	}
+
+	{
+		// menggunakan nama varialbles yang lain
+
+		const personD = {
+			firstName: "dodo",
+			lastName: "Baik",
+			age: 30
+		};
+
+		let {
+			firstName: namaDepan,
+			lastName: namaBelakang,
+			age: umur
+		} = personD;
+
+		function displayPersonWithAlias({namaDepan, namaBelakang, umur}) {
+			console.log(namaDepan);
+			console.log(namaBelakang);
+			console.log(umur);
+		}
+
+		displayPersonWithAlias({namaDepan, namaBelakang, umur}); // akan menampilkan nama depan, nama belakang, dan umur
+	}
+
+	</script>
+	
+</body>
+</html>
