@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+		function useStrict() {
+			"use strict"; 
+			const person = {
+				firstName: "John",
+			} 
+			with (person) {
+				// The 'with' statement is not allowed in strict mode
+				// It can lead to confusion and bugs, so it is disallowed
+				console.log(firstName);
+			}
+		}
+
+		useStrict();
+	</script>
+	
+</body>
+</html>
